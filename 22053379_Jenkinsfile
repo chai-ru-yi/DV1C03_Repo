@@ -52,6 +52,13 @@ pipeline {
                 """
             }
         }
+        
+        
+        stage('Stage 1') {
+            steps {
+                sh "S1 22053379: Environment Preparation Completed"
+            }
+        }
 
     }   
 } 
