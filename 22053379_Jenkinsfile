@@ -31,14 +31,14 @@ pipeline {
             }
         }
         
-   //     stage('Stage 2_22053379'){
-   //         steps {
-   //         sh 'docker rm -f S2_22053379_Server'
-   //         sh 'docker run -d -it -p 42000:80 --name=S2_22053379_Server 22053379_webimage /bin/bash'
-   //         echo "S2_22053379: Web Server Creation Completed"
+        stage('Stage 2_22053379'){
+            steps {
+            sh 'docker rm -f S2_22053379_Server'
+            sh 'docker run -d -it -p 42000:80 --name=S2_22053379_Server 22053379_webimage /bin/bash'
+            echo "S2_22053379: Web Server Creation Completed"
             
-   //         }
-   //     }
+            }
+        }
 
     }   
 } 
