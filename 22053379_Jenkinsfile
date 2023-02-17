@@ -67,7 +67,7 @@ pipeline {
        stage('Stage 6_22053379'){
             when{
                 not{
-                Abort
+                abort
                 }
             }
         steps{
