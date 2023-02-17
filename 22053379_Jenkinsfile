@@ -67,14 +67,7 @@ pipeline {
        stage('Stage 6_22053379'){
        steps{
        script{
-           try{
-           userInpu = input(
-           id" 'Proceed1', message: 'Do you want to release the work?', parameters: [
-           [$class: 'BooleanParameterDefinition', defaultValue: true, description:' ', name: 'Please confirm if you agree with this']
-           ])
-           }catch(err) { 
-           userInput = false
-           }
+           
            node{
            if(userInput == true){
            echo "this was successful"
