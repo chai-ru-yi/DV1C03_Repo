@@ -67,9 +67,9 @@ pipeline {
        stage('Stage 6_22053379'){
        steps{
        script{
-          def userInput 
+           
            node{
-           if(userInput == true){
+           if(Input == true){
            echo "this was successful"
            }else{
            echo "this was not successful"
