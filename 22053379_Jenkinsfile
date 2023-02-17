@@ -57,6 +57,12 @@ pipeline {
   
       }
       }
+      
+      stage('Stage 5_22053379'){
+        steps{
+            input('Do you want to release the work?')
+        }
+      }
         
 
     }   
