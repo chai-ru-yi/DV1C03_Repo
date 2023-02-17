@@ -63,7 +63,19 @@ pipeline {
             input('Do you want to release the work?')
         }
       }
-        
+      
+       stage('Stage 6_22053379){
+            when{
+                not{
+                Abort
+                }
+            }
+        steps{
+        echo "Work Released - 22053379"
+        }
+          
+       }
+
 
     }   
 } 
