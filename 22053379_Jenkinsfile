@@ -63,15 +63,27 @@ pipeline {
             input('Do you want to release the work?')
         }
       }
-      
+       def userInput
        stage('Stage 6_22053379'){
        steps{
        script{
-           if(input == false){
-           Abort
-           }else{
-           sh echo "Work Released - 22053379"
+           try{
+           userInpu = input(
+           id" 'Proceed1', message: 'Do you want to release the work?', parameters: [
+           [$class: 'BooleanParameterDefinition', defaultValue: true, description:' ', name: 'Please confirm if you agree with this']
+           ])
+           }catch(err) { 
+           userInput = false
            }
+           node{
+           if(userInput == true){
+           echo "this was successful"
+           }else{
+           echo "this was not successful"
+           currentBuild.results = 'FAILURE'
+           }}
+           
+           
        }   
        }
        }
