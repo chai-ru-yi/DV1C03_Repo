@@ -43,13 +43,13 @@ pipeline {
         
         parallel{
         
-            stage('Stage 3_22053379){
+            stage('Stage 3_22053379'){
                 steps {
                     sh "echo S3_22053379: API Completed"
                 }
             }
         
-            stage('Stage 4_22053379){
+            stage('Stage 4_22053379'){
                 steps {
                     sh "echo S4_22053379: DAST Security Test Completed"
                 }
