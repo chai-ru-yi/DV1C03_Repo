@@ -67,7 +67,7 @@ pipeline {
        stage('Stage 6_22053379'){
        steps{
        script{
-           if(input == "Abort"){
+           if(input == false){
            Abort
            }else{
            sh echo "Work Released - 22053379"
