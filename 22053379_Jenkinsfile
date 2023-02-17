@@ -63,11 +63,11 @@ pipeline {
             input('Do you want to release the work?')
         }
       }
-       def userInput
+       
        stage('Stage 6_22053379'){
        steps{
        script{
-           
+          def userInput 
            node{
            if(userInput == true){
            echo "this was successful"
