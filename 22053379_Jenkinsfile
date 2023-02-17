@@ -73,7 +73,8 @@ pipeline {
                 }
             }
          steps{
-           echo "Work Released"
+           currentBuild.results = 'SUCCESS'
+           sh "echo Work Released"
            }
          
          
