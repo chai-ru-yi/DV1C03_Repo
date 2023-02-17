@@ -67,14 +67,23 @@ pipeline {
        stage('Stage 6_22053379'){
        steps{
        script{
-           
-           node{
-           if(Input == true){
-           echo "this was successful"
-           }else{
-           echo "this was not successful"
-           currentBuild.results = 'FAILURE'
+         when{
+            not{
+                currentBuild.results = 'FAILURE'
+                }
+            }
+         steps{
+           echo "Work Released"
            }}
+         
+         
+           //node{
+           //if(Input == true){
+           //echo "this was successful"
+           //}else{
+           //echo "this was not successful"
+          // currentBuild.results = 'FAILURE'
+          // }}
            
            
        }   
