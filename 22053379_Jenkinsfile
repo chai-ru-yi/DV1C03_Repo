@@ -73,7 +73,6 @@ pipeline {
                 }
             }
          steps{
-           env.BRANCH_NAME == 'Proceed'
            echo " Work Released - 22053379"
            }
          
