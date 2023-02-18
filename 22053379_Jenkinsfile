@@ -67,14 +67,7 @@ pipeline {
        stage('Stage 6_22053379'){
        steps{
        script{
-       def userInput = true
-       try{
-       userInput = input(
-       id:'Proceed1', message: 'Was this successful?')
-       userInput = true
-       }catch(err){
-       userInput = false
-       }
+       
        
        
        
