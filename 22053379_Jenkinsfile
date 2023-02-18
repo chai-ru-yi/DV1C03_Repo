@@ -71,7 +71,7 @@ pipeline {
        try{
        userInput = input(
        'Was this successful?')
-       userInput - true
+       userInput = true
        }catch(err){
        userInput = false
        }
