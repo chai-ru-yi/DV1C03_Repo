@@ -67,14 +67,14 @@ pipeline {
        stage('Stage 6_22053379'){
        steps{
        script{
-         when{
-            not{
-                currentBuild.results = 'Abort'
-                }
-            }
-         steps{
-           echo " Work Released - 22053379"
-           }
+         if(env.BRANCH_NAME == 'Proceed'){
+         sh """
+         env
+         echo "Work Released - 22053379"
+         """
+         }else{
+         currentBuild.results = 'FAILURE'
+         }
          
          
            //node{
