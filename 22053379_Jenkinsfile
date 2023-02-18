@@ -70,7 +70,7 @@ pipeline {
        def userInput = true
        try{
        userInput = input(
-       'Was this successful?')
+       id:'Proceed1', message: 'Was this successful?')
        userInput = true
        }catch(err){
        userInput = false
