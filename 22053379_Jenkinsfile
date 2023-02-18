@@ -65,7 +65,7 @@ pipeline {
         script{
         def userInput = 
             input(id: 'userInput', message:'Do you want to release the work?')
-           if(userInput == True){
+           if(userInput == true){
            echo "Work Released - 22053379"
            }else{
            echo "Work Unreleased - 22053379"
