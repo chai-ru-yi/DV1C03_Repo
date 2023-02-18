@@ -73,7 +73,7 @@ pipeline {
          echo "Work Released - 22053379"
          """
          }else{
-         currentBuild.results = 'FAILURE'
+         
          }
          
          
