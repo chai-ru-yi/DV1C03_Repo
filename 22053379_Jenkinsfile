@@ -70,7 +70,7 @@ pipeline {
        stage('Stage 6_22053379'){
        steps{
        script{
- 
+           def input
            node{
            if(input == true){
            echo "this was successful"
