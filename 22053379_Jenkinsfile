@@ -62,27 +62,28 @@ pipeline {
       
        stage('Stage 5_22053379'){
         steps{
-            input('Do you want to release the work?')
+        script{
+        def userInput = 
+            input(id: 'userInput', message:'Do you want to release the work?',
+            parameters: [
+            [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Path of config file', name: 'Config'],
+            [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Test Info file', name: 'Test'],
+            ]
+           if(userInput == true){
+           echo "Work Released - 22053379"
+           }else{
+           echo "Work Unreleased - 22053379"
+           }
+           
+            
+            
+            )
+            
         }
       }
       
       
-       stage('Stage 6_22053379'){
-       steps{
-       script{
-           def input
-           node{
-           if(input == true){
-           echo "this was successful"
-           }else{
-           echo "this was not successful"
-          currentBuild.results = 'FAILURE'
-           }}
-           
-           
-       }   
-       }
-       }
+       
      
        
        
