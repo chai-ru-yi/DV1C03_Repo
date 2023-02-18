@@ -70,9 +70,7 @@ pipeline {
        def userInput = true
        try{
        userInput = input(
-       id:'Proceed1', message: 'Was this successful?', parameters:[
-       [$class:'BooleanParameterDefinition', defaultValue: true, description:'', name:'PLease confim']
-       ])
+       id:'Proceed1', message: 'Was this successful?')
        }catch(err){
        userInput = false
        }
