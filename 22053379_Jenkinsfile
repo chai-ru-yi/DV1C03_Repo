@@ -1,10 +1,11 @@
 pipeline {
 
     agent {
-        node {
-            label 'master'
+        parameters {
+        choice(name:'CHOICE', choices: ['Proceed', 'Abort'], description:'Do you want to release the work?')
         }
-    }
+   
+   }
 
     tools { 
     maven 'maven3' 
@@ -59,15 +60,29 @@ pipeline {
       }
       
       
-      def userInput = true
+      
        stage('Stage 5_22053379'){
         steps{
         script{
        
-         userInput = input('Do you want to release the work?')
+         def choice = "${params.CHOICE}"
+         input('Do you want to release the work?')
      
          }
         }
+      }
+      
+      
+      stage('Stage 6_22053379'){
+      steps{
+      script{
+      def choice = "${params.CHOICE}"
+      if(choice == "Proceed"){
+      echo "Work Released - 22053379"
+      } else {
+      
+      }
+      }
       }
       
       
