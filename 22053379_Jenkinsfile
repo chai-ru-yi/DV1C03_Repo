@@ -57,43 +57,12 @@ pipeline {
   
       }
       }
-      
-      stage('Stage 5_22053379'){
-        steps{
-            input('Do you want to release the work?')
-        }
-      }
-       
-       //stage('Stage 6_22053379'){
-       //steps{
-       //script{
+     
        
        
        
        
-       //node{
-         //if(userInput == true){
-         //sh "echo Work Released - 22053379"
-         
-         //}else{
-         //sh "echo Work Unreleased - 22053379"
-         
-         //}
-         //}
-         
-         
-           //node{
-           //if(Input == true){
-           //echo "this was successful"
-           //}else{
-           //echo "this was not successful"
-          // currentBuild.results = 'FAILURE'
-          // }}
-           
-           
-       //}   
-       //}
-       //}
+     
 
 
     }   
