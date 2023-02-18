@@ -67,12 +67,24 @@ pipeline {
        stage('Stage 6_22053379'){
        steps{
        script{
-         if(ok){
+       def userInput = true
+       try{
+       userInput = input(
+       id:'Proceed1', message: 'Was this successful?', parameters:[
+       [$class:'BooleanParameterDefinition', deafultValue: true, description:'', name:'PLease confim')
+       ])
+       }
+       
+       
+       
+       node{
+         if(userInput == true){
          sh "echo Work Released - 22053379"
          
          }else{
          sh "echo Work Unreleased - 22053379"
          
+         }
          }
          
          
