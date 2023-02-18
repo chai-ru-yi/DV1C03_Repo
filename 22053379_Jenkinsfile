@@ -68,7 +68,7 @@ pipeline {
        steps{
        script{
          if(env.BRANCH_NAME == 'Proceed'){
-         echo "Work Released - 22053379"
+         sh "echo Work Released - 22053379"
          
          }else{
          
