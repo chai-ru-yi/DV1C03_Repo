@@ -72,7 +72,7 @@ pipeline {
        script{
  
            node{
-           if(Input == true){
+           if(input == true){
            echo "this was successful"
            }else{
            echo "this was not successful"
