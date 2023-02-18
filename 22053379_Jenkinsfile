@@ -71,6 +71,7 @@ pipeline {
        try{
        userInput = input(
        id:'Proceed1', message: 'Was this successful?')
+       userInput - true
        }catch(err){
        userInput = false
        }
