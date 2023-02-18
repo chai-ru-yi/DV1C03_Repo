@@ -62,10 +62,11 @@ pipeline {
       
        stage('Stage 5_22053379'){
         steps{
+        script{
        
-         def userInput =   input('Do you want to release the work?')
+         def userInput = input('Do you want to release the work?')
      
-         
+         }
         }
       }
       
