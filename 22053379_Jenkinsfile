@@ -73,8 +73,8 @@ pipeline {
                 }
             }
          steps{
-           currentBuild.results = 'SUCCESS'
-           sh "echo Work Released"
+           env.BRANCH_NAME == 'Proceed'
+           echo " Work Released - 22053379"
            }
          
          
