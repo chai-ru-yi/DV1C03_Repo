@@ -64,12 +64,8 @@ pipeline {
         steps{
         script{
         def userInput = 
-            input(id: 'userInput', message:'Do you want to release the work?',
-            parameters: [
-            [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Path of config file', name: 'Config'],
-            [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Test Info file', name: 'Test'],
-            ])
-           if(userInput == true){
+            input(id: 'userInput', message:'Do you want to release the work?')
+           if(userInput == True){
            echo "Work Released - 22053379"
            }else{
            echo "Work Unreleased - 22053379"
