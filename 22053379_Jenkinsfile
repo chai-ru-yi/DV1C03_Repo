@@ -73,7 +73,7 @@ pipeline {
        id:'Proceed1', message: 'Was this successful?', parameters:[
        [$class:'BooleanParameterDefinition', deafultValue: true, description:'', name:'PLease confim']
        ])
-       }catch(err)
+       }catch(err){
        userInput = false
        }
        
