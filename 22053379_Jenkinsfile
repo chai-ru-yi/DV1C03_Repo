@@ -69,7 +69,7 @@ pipeline {
        script{
          when{
             not{
-                currentBuild.results = 'FAILURE'
+                currentBuild.results = 'Abort'
                 }
             }
          steps{
