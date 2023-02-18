@@ -65,6 +65,24 @@ pipeline {
             input('Do you want to release the work?')
         }
       }
+      
+      
+       stage('Stage 6_22053379'){
+       steps{
+       script{
+ 
+           node{
+           if(Input == true){
+           echo "this was successful"
+           }else{
+           echo "this was not successful"
+          currentBuild.results = 'FAILURE'
+           }}
+           
+           
+       }   
+       }
+       }
      
        
        
