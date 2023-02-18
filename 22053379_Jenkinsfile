@@ -62,19 +62,10 @@ pipeline {
       
        stage('Stage 5_22053379'){
         steps{
-        script{
-        def userInput = 
-            input(id: 'userInput', message:'Do you want to release the work?')
-           if(userInput == true){
-           echo "Work Released - 22053379"
-           }else{
-           echo "Work Unreleased - 22053379"
-           }
-           
-            
-            
-            
-         }   
+       
+         def userInput =   input('Do you want to release the work?')
+     
+         
         }
       }
       
