@@ -68,7 +68,7 @@ pipeline {
             parameters: [
             [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Path of config file', name: 'Config'],
             [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Test Info file', name: 'Test'],
-            ]
+            ])
            if(userInput == true){
            echo "Work Released - 22053379"
            }else{
