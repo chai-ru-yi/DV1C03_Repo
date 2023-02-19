@@ -68,8 +68,7 @@ pipeline {
        stage('Stage 5_22053379'){
         steps{
         script{
-       
-         //def choice = "${params.CHOICE}"
+   
          def proceed = true
          input('Do you want to release the work?')
      
@@ -81,13 +80,12 @@ pipeline {
       stage('Stage 6_22053379'){
       steps{
       script{
-      def proceed = true
-      if(proceed){
-      echo "Work Released - 22053379"
-      }else{
-      echo "Work UNReleased - 22053379"
-      currentBuild.result = 'FAILURE'
-      }
+        def proceed = true
+            if(proceed){
+                echo "Work Released - 22053379"
+            }else{
+                currentBuild.result = 'FAILURE'
+            }
       
       }
       }
