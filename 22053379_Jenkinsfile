@@ -85,6 +85,7 @@ pipeline {
       if(proceed){
       echo "Work Released - 22053379"
       }else{
+      echo "Work UNReleased - 22053379"
       currentBuild.result = 'FAILURE'
       }
       
