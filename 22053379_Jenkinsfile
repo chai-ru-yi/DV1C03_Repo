@@ -65,7 +65,7 @@ pipeline {
         steps{
         script{
        
-         def choice = "${params.CHOICE}"
+         //def choice = "${params.CHOICE}"
          input('Do you want to release the work?')
      
          }
@@ -78,7 +78,7 @@ pipeline {
       
       when{
       not{
-      choice == "Abort"
+      input(false)
       }}
       steps{
       echo "It is Proceed"
