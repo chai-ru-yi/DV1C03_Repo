@@ -77,6 +77,21 @@ pipeline {
       }
       
       
+      stage('Stage 6_22053379){
+      steps{
+      script{
+      
+      if(currentBuild.result == 'SUCCESS'){
+      echo "Work Released - 22053379"
+      }else{
+      currentBuild.result = 'FAILURE'
+      }
+      
+      }
+      }
+      }
+      
+      
    
 
     }   
