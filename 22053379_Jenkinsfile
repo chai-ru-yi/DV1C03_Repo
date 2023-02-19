@@ -78,7 +78,7 @@ pipeline {
       
       when{
       not{
-      equals(false)
+      parameters equals(false)
       }}
       steps{
       echo "It is Proceed"
