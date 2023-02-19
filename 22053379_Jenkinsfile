@@ -1,6 +1,10 @@
 pipeline {
 
-    agent any
+    agent{
+    node{
+    label 'master'
+    }
+    }
        // parameters {
        // choice(name:'CHOICE', choices: ['Yes', 'No'], description:'Do you want to release the work?')
        // }
