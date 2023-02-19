@@ -81,7 +81,7 @@ pipeline {
       steps{
       script{
       
-      if(currentBuild.result == 'SUCCESS'){
+      if(currentBuild.result == true){
       echo "Work Released - 22053379"
       }else{
       currentBuild.result = 'FAILURE'
