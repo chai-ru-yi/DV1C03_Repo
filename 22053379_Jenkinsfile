@@ -80,6 +80,7 @@ pipeline {
       if(choice == "Proceed"){
       echo "Work Released - 22053379"
       } else {
+      echo "Work Unreleased - 22053379"
       }
       
       }
