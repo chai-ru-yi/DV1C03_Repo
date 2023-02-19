@@ -77,30 +77,7 @@ pipeline {
       }
       
       
-      stage('Stage 6_22053379'){
-     // def choice = "${params.CHOICE}"
-      
-      when{
-      not{
-      parameters equals(false)
-      }}
-      steps{
-      echo "It is Proceed"
-      }
-      
-      
-      
-      
-     // def choice = "${params.CHOICE}"
-     // if(choice == "Proceed"){
-     // echo "Work Released - 22053379"
-     // } else {
-     // echo "Work Unreleased - 22053379"
-     // }
-      
-     
-      }
-
+   
 
     }   
 } 
