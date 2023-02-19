@@ -1,9 +1,9 @@
 pipeline {
 
     agent any
-        parameters {
-        choice(name:'CHOICE', choices: ['Yes', 'No'], description:'Do you want to release the work?')
-        }
+       // parameters {
+       // choice(name:'CHOICE', choices: ['Yes', 'No'], description:'Do you want to release the work?')
+       // }
    
    
 
@@ -74,17 +74,27 @@ pipeline {
       
       
       stage('Stage 6_22053379'){
-      steps{
-      script{
-      def choice = "${params.CHOICE}"
-      if(choice == "Proceed"){
-      echo "Work Released - 22053379"
-      } else {
-      echo "Work Unreleased - 22053379"
+      
+      
+      when{
+      not{
+      
+      }}
+      "steps{
+      echo "It is abort"
       }
       
-      }
-      }
+      
+      
+      
+     // def choice = "${params.CHOICE}"
+     // if(choice == "Proceed"){
+     // echo "Work Released - 22053379"
+     // } else {
+     // echo "Work Unreleased - 22053379"
+     // }
+      
+     
       }
 
 
