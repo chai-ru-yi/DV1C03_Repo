@@ -80,7 +80,7 @@ pipeline {
       not{
       
       }}
-      "steps{
+      steps{
       echo "It is abort"
       }
       
