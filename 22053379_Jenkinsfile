@@ -78,7 +78,7 @@ pipeline {
       
       when{
       not{
-      input(false)
+      equals(false)
       }}
       steps{
       echo "It is Proceed"
