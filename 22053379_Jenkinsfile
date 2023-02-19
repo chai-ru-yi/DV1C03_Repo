@@ -74,14 +74,14 @@ pipeline {
       
       
       stage('Stage 6_22053379'){
-      
+      def choice = "${params.CHOICE}"
       
       when{
       not{
-      
+      choice == "Abort"
       }}
       steps{
-      echo "It is abort"
+      echo "It is Proceed"
       }
       
       
