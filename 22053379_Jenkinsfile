@@ -2,7 +2,7 @@ pipeline {
 
     agent any
         parameters {
-        choice(name:'CHOICE', choices: ['Proceed', 'Abort'], description:'Do you want to release the work?')
+        choice(name:'CHOICE', choices: ['Yes', 'No'], description:'Do you want to release the work?')
         }
    
    
